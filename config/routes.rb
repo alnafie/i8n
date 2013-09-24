@@ -1,4 +1,15 @@
 I8n::Application.routes.draw do
+
+  # scope "/:locale" do
+  #   resources :books
+  # end
+
+  scope "(:locale)", locale: /ar|en/ do
+    resources :products
+  end
+
+  match '/:locale' => 'products#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +59,7 @@ I8n::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'products#index'
 
   # See how all your routes lay out with "rake routes"
 
