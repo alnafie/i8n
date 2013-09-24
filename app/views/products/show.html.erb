@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <span>الاسم:</span>
-  <%= @product.name %>
+  <span>Name of product:</span>
+  <span dir="rtl"><%= @product.name %></span>
 </p>
 
 <p>
   <span>الاسم بالعربي:</span>
-  <%= @product.name_ar %>
+  <bdi><%= @product.name_ar %></bdi>
 </p>
 
 <p>
   <span>Price:</span>
-  <%= @product.price %>
+  <bdi><%= @product.price %></bdi>
 </p>
 
 

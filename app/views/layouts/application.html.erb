@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<%= request.original_url %><br/>
-<%= params %><br/>
+url: <%= request.original_url %><br/>
+<span dir="rtl">بارامس: <%= params %></span><br/>
 
 <% @link_string = (params[:locale] == "en") ? "عربي" : "English" %>
 <% params[:locale] = (params[:locale] == "en") ? :ar : :en %>
